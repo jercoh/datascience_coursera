@@ -46,8 +46,7 @@ def main():
     afinn_file = open(sys.argv[1])
     tweet_file = open(sys.argv[2])
     score_dic = get_scores(afinn_file)
-    for line in tweet_file:
-    	compute_score_of_new_terms(tweet_file, score_dic)
+    compute_score_of_new_terms(tweet_file, score_dic)
     for word in new_terms.keys():
     	print(word+" "+str(new_terms[word][2]))
 
